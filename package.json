@@ -1,0 +1,55 @@
+{
+  "name": "@kokiri/core",
+  "version": "0.0.17",
+  "description": "Basic structural components for Vue.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "kokiri",
+    "petals",
+    "petals-ui",
+    "ui",
+    "components",
+    "front-end",
+    "frontend",
+    "vue",
+    "vuejs",
+    "vue.js"
+  ],
+  "author": "Ourai Lin <ourairyu@gmail.com> (https://ourai.ws/)",
+  "license": "MIT",
+  "homepage": "https://oss.ourai.ws/petals/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kokiri-ui/core.git"
+  },
+  "scripts": {
+    "precopy": "rm -rf dist",
+    "copy": "mkdir dist && cp -R src/* dist",
+    "prebuild": "npm run copy",
+    "build": "tsc && rm -rf dist/shims-*.d.ts",
+    "prerelease": "npm run build",
+    "release": "npm publish --access=public"
+  },
+  "dependencies": {
+    "petals-ui": "0.0.17",
+    "throttle-debounce": "^3.0.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.0",
+    "vue-property-decorator": "^8.0.0"
+  },
+  "devDependencies": {
+    "@ntks/eslint-config": "0.0.0",
+    "@ntks/stylelint-config": "0.0.5",
+    "@types/node": "^13.11.1",
+    "eslint": "^7.21.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.0",
+    "typescript": "^4.1.3",
+    "vue": "^2.6.12",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2"
+  }
+}
