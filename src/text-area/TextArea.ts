@@ -27,7 +27,7 @@ class TextAreaStructuralComponent
   @Prop({ type: Boolean, default: false })
   public readonly clearable!: boolean;
 
-  @Prop({ type: String, default: 'medium' })
+  @Prop({ type: String })
   public readonly size!: FormControlSize;
 
   @Prop({ type: Number })

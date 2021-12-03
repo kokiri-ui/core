@@ -15,7 +15,7 @@ class FormFieldStructuralComponent
   @Prop({ type: Object, default: () => ({}) })
   public readonly labelOption!: FormFieldLabelOption;
 
-  @Prop({ type: String, default: 'medium' })
+  @Prop({ type: String })
   public readonly controlSize!: FormControlSize;
 
   @Prop({ type: Boolean, default: false })

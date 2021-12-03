@@ -13,7 +13,7 @@ import { BaseStructuralComponent } from '../basic';
 class ButtonStructuralComponent
   extends BaseStructuralComponent<ButtonHeadlessComponent>
   implements IButtonComponent {
-  @Prop({ type: String, default: 'medium' })
+  @Prop({ type: String })
   public readonly size!: ButtonSize;
 
   @Prop({ type: String, default: 'solid' })
