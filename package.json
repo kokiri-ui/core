@@ -1,6 +1,6 @@
 {
   "name": "@kokiri/core",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Basic structural components for Vue.js",
   "files": [
     "dist"
