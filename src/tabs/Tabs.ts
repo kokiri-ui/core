@@ -1,13 +1,13 @@
-import { TabNavFlag, TabBarPlacement } from 'petals-ui/dist/tab-bar';
+import { TabNavFlag, TabThemeType, TabBarPlacement } from 'petals-ui/dist/tab-bar';
 import { ITabsComponent, TabsHeadlessComponent } from 'petals-ui/dist/tabs';
 
-import { Component, Prop } from 'vue-property-decorator';
+import { Component, Prop, Emit } from 'vue-property-decorator';
 
 import { BaseStructuralComponent } from '../basic';
 
 @Component
 class TabsStructuralComponent
-  extends BaseStructuralComponent<TabsHeadlessComponent>
+  extends BaseStructuralComponent<TabsHeadlessComponent, TabThemeType>
   implements ITabsComponent {
   /**
    * 默认激活的选项卡索引
@@ -32,6 +32,9 @@ class TabsStructuralComponent
    */
   @Prop({ type: Boolean, default: false })
   public readonly fixed!: boolean;
+
+  @Emit('change')
+  public onChange(activeFlag: TabNavFlag): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new TabsHeadlessComponent(this));

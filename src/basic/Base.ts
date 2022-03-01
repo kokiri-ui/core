@@ -12,14 +12,23 @@ import {
 import { ComponentTag } from './typing';
 
 @Component
-class BaseStructuralComponent<HeadlessComponent = BaseHeadlessComponent>
+class BaseStructuralComponent<
+    HeadlessComponent = BaseHeadlessComponent,
+    ComponentTheme extends string = string
+  >
   extends Vue
   implements IBaseComponent<ComponentTag> {
-  @Prop({ type: [String, Function], default: '' })
+  @Prop({ type: [String, Function] })
   public readonly tag!: ComponentTag;
 
   @Prop({ type: [String, Object, Array] })
   public readonly className!: ClassName;
+
+  @Prop({ type: Object })
+  public readonly style!: Record<string, any>;
+
+  @Prop({ type: String })
+  public readonly theme!: ComponentTheme;
 
   private __hc!: HeadlessComponent;
 

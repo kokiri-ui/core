@@ -17,6 +17,9 @@ class DataTableStructuralComponent
   @Prop({ type: Array, default: () => [] })
   public readonly columns!: ColumnProps[];
 
+  @Prop({ type: [String, Function], default: 'id' })
+  public readonly rowKey!: string | ((record: Record<string, any>) => string);
+
   @Prop({ type: Boolean, default: false })
   public readonly loading!: boolean;
 
@@ -35,14 +38,17 @@ class DataTableStructuralComponent
   @Prop({ type: Array, default: () => [10, 20, 50, 100] })
   public readonly pageSizes!: number[];
 
+  @Prop({ type: Boolean, default: false })
+  public readonly autoHeight!: boolean;
+
   @Emit('selection-change')
-  protected onSelectionChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onSelectionChange(records: Record<string, any>[]): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   @Emit('current-change')
-  protected onCurrentChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onCurrentChange(currentPage: number): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   @Emit('size-change')
-  protected onSizeChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onSizeChange(pageSize: number): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new DataTableHeadlessComponent(this));

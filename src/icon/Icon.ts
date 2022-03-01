@@ -23,7 +23,7 @@ class IconStructuralComponent
   }
 
   @Emit('click')
-  protected onClick(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onClick(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new IconHeadlessComponent(this));

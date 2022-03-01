@@ -36,7 +36,7 @@ class SelectStructuralComponent
   public readonly popupAppendToBody!: boolean;
 
   @Emit('change')
-  protected onChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onChange(value: SelectValueType): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new SelectHeadlessComponent(this));

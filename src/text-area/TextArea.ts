@@ -40,16 +40,16 @@ class TextAreaStructuralComponent
   public readonly rows!: number;
 
   @Prop({ type: Boolean, default: false })
-  public readonly wordage!: boolean;
+  public readonly showWordage!: boolean;
 
   @Prop({ type: String })
   public readonly resize!: ResizeType;
 
   @Emit('input')
-  protected onInput(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onInput(value: string): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   @Emit('change')
-  protected onChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onChange(value: string): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new TextAreaHeadlessComponent(this));

@@ -32,7 +32,7 @@ class ButtonStructuralComponent
   public readonly nativeType!: ButtonNativeType;
 
   @Emit('click')
-  protected onClick(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onClick(evt: any): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new ButtonHeadlessComponent(this));

@@ -46,7 +46,7 @@ class DialogStructuralComponent
   public readonly destroyOnClose!: boolean;
 
   @Emit('close')
-  protected onClose(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onClose(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new DialogHeadlessComponent(this));

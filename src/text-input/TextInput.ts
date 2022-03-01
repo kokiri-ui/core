@@ -1,4 +1,4 @@
-import { FormControlSize } from 'petals-ui/dist/form-control';
+import { FormControlSize, FormControlPrefixAndSuffix } from 'petals-ui/dist/form-control';
 import { ITextInputComponent, TextInputHeadlessComponent } from 'petals-ui/dist/text-input';
 import { Component, Prop, Emit } from 'vue-property-decorator';
 
@@ -35,11 +35,17 @@ class TextInputStructuralComponent
   @Prop({ type: Number })
   public readonly maxLength!: number;
 
+  @Prop({ type: [String, Object] })
+  public readonly prefix!: string | FormControlPrefixAndSuffix;
+
+  @Prop({ type: [String, Object] })
+  public readonly suffix!: string | FormControlPrefixAndSuffix;
+
   @Emit('input')
-  protected onInput(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onInput(value: string): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   @Emit('change')
-  protected onChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onChange(value: string): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new TextInputHeadlessComponent(this));

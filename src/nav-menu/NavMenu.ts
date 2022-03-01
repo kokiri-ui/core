@@ -13,6 +13,18 @@ import { BaseStructuralComponent } from '../basic';
 class NavMenuStructuralComponent
   extends BaseStructuralComponent<NavMenuHeadlessComponent>
   implements INavMenuComponent {
+  @Prop({ type: String })
+  public readonly defaultActiveFlag!: string;
+
+  @Prop({ type: String })
+  public readonly activeFlag!: string;
+
+  @Prop({ type: Array })
+  public readonly defaultOpenFlags!: string[];
+
+  @Prop({ type: Array })
+  public readonly openFlags!: string[];
+
   @Prop({ type: String, default: 'vertical' })
   public readonly direction!: MenuDirection;
 

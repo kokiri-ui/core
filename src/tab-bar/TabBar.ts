@@ -1,6 +1,7 @@
 import {
   TabNavFlag,
   TabNavType,
+  TabThemeType,
   ITabBarComponent,
   TabBarHeadlessComponent,
 } from 'petals-ui/dist/tab-bar';
@@ -11,7 +12,7 @@ import { BaseStructuralComponent } from '../basic';
 
 @Component
 class TabBarStructuralComponent
-  extends BaseStructuralComponent<TabBarHeadlessComponent>
+  extends BaseStructuralComponent<TabBarHeadlessComponent, TabThemeType>
   implements ITabBarComponent {
   @Prop({ type: Array, default: () => [] })
   public readonly navs!: TabNavType[];

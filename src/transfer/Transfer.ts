@@ -36,7 +36,7 @@ class TransferStructuralComponent
   public readonly filterable!: boolean;
 
   @Emit('change')
-  protected onChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onChange(value: string[]): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   @Emit('selection-change')
   protected onSelectionChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function

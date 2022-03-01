@@ -33,7 +33,7 @@
     "release": "npm publish --access=public"
   },
   "dependencies": {
-    "petals-ui": "0.0.17",
+    "petals-ui": "0.0.22",
     "throttle-debounce": "^3.0.1"
   },
   "peerDependencies": {

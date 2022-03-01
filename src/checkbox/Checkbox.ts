@@ -24,7 +24,7 @@ class CheckboxStructuralComponent
   public readonly checked!: boolean;
 
   @Emit('change')
-  protected onChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onChange(value: CheckableValue): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new CheckboxHeadlessComponent(this));
