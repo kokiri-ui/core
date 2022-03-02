@@ -17,15 +17,12 @@ class BaseStructuralComponent<
     ComponentTheme extends string = string
   >
   extends Vue
-  implements IBaseComponent<ComponentTag> {
+  implements Omit<IBaseComponent<ComponentTag>, 'style'> {
   @Prop({ type: [String, Function] })
   public readonly tag!: ComponentTag;
 
   @Prop({ type: [String, Object, Array] })
   public readonly className!: ClassName;
-
-  @Prop({ type: Object })
-  public readonly style!: Record<string, any>;
 
   @Prop({ type: String })
   public readonly theme!: ComponentTheme;
