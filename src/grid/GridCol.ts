@@ -17,7 +17,7 @@ class GridColStructuralComponent
    *
    * 为 `0` 时相当于 `display: none;`
    */
-  @Prop({ type: Number, default: -1 })
+  @Prop({ type: Number })
   public readonly span!: number;
 
   /**
@@ -43,7 +43,7 @@ class GridColStructuralComponent
    *
    * 可为栅格数或一个包含其他属性的对象
    */
-  @Prop({ type: [Number, Object], default: -1 })
+  @Prop({ type: [Number, Object] })
   public readonly xs!: GridBreakpointOption;
 
   /**
@@ -51,7 +51,7 @@ class GridColStructuralComponent
    *
    * 可为栅格数或一个包含其他属性的对象
    */
-  @Prop({ type: [Number, Object], default: -1 })
+  @Prop({ type: [Number, Object] })
   public readonly sm!: GridBreakpointOption;
 
   /**
@@ -59,7 +59,7 @@ class GridColStructuralComponent
    *
    * 可为栅格数或一个包含其他属性的对象
    */
-  @Prop({ type: [Number, Object], default: -1 })
+  @Prop({ type: [Number, Object] })
   public readonly md!: GridBreakpointOption;
 
   /**
@@ -67,7 +67,7 @@ class GridColStructuralComponent
    *
    * 可为栅格数或一个包含其他属性的对象
    */
-  @Prop({ type: [Number, Object], default: -1 })
+  @Prop({ type: [Number, Object] })
   public readonly lg!: GridBreakpointOption;
 
   /**
@@ -75,7 +75,7 @@ class GridColStructuralComponent
    *
    * 可为栅格数或一个包含其他属性的对象
    */
-  @Prop({ type: [Number, Object], default: -1 })
+  @Prop({ type: [Number, Object] })
   public readonly xl!: GridBreakpointOption;
 
   public created(): void {

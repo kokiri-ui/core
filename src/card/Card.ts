@@ -1,5 +1,6 @@
-import { CardBodyStyle, ICardComponent, CardHeadlessComponent } from 'petals-ui/dist/card';
 import { Component, Prop } from 'vue-property-decorator';
+
+import { CardBodyStyle, ICardComponent, CardHeadlessComponent } from 'petals-ui/dist/card';
 
 import { BaseStructuralComponent } from '../basic';
 
