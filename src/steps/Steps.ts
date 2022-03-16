@@ -11,7 +11,7 @@ class StepsStructuralComponent
   @Prop({ type: String, default: 'horizontal' })
   public readonly direction!: DirectionType;
 
-  @Prop({ type: Number, default: 1 })
+  @Prop({ type: Number, default: 0 })
   public readonly activeFlag!: number;
 
   public created(): void {

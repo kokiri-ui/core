@@ -11,7 +11,7 @@ class StepStructuralComponent
   public readonly title!: string;
 
   @Prop({ type: String })
-  public readonly content!: string;
+  public readonly description!: string;
 
   public created(): void {
     this.setHeadlessComponent(new StepHeadlessComponent(this));
