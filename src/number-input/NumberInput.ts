@@ -12,7 +12,7 @@ class NumberInputStructuralComponent
   @Prop({ type: String, default: '' })
   public readonly name!: string;
 
-  @Prop({ type: String })
+  @Prop({ type: Number })
   public readonly value!: number;
 
   @Prop({ type: Boolean, default: false })
