@@ -35,7 +35,7 @@ class NavMenuStructuralComponent
   public readonly collapsed!: boolean;
 
   @Emit('select')
-  protected onMenuItemSelect(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  public onSelect(flag: string): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   @Emit('open')
   protected onMenuItemOpen(): void {} // eslint-disable-line @typescript-eslint/no-empty-function

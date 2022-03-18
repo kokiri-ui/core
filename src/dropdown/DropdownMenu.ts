@@ -1,4 +1,4 @@
-import { Component, Prop } from 'vue-property-decorator';
+import { Component, Prop, Emit } from 'vue-property-decorator';
 
 import { IDropdownMenuComponent, DropdownMenuHeadlessComponent } from 'petals-ui/dist/dropdown';
 
@@ -19,6 +19,9 @@ class DropdownMenuStructuralComponent
 
   @Prop({ type: Array })
   public readonly openFlags!: string[];
+
+  @Emit('select')
+  public onSelect(flag: string): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new DropdownMenuHeadlessComponent(this));

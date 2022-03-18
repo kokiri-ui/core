@@ -17,7 +17,7 @@ class DropdownStructuralComponent
   public readonly trigger!: DropdownMenuTrigger;
 
   @Prop({ type: String, default: 'bottom-left' })
-  public readonly position!: DropdownMenuPlacement;
+  public readonly placement!: DropdownMenuPlacement;
 
   public created(): void {
     this.setHeadlessComponent(new DropdownHeadlessComponent(this));
