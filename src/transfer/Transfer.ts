@@ -26,10 +26,10 @@ class TransferStructuralComponent
   @Prop({ type: Array, default: () => [] })
   public readonly dataSource!: TransferData;
 
-  @Prop({ type: Array, default: () => [] })
+  @Prop({ type: Array, default: () => ['备选', '已选'] })
   public readonly titles!: string[];
 
-  @Prop({ type: Array, default: () => [] })
+  @Prop({ type: Array, default: () => ['', ''] })
   public readonly operationText!: string[];
 
   @Prop({ type: Boolean, default: false })
@@ -38,8 +38,8 @@ class TransferStructuralComponent
   @Emit('change')
   public onChange(value: string[]): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
-  @Emit('selection-change')
-  protected onSelectionChange(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
+  @Emit('select')
+  public onSelect(sourceSelected: string[], targetSelected: string[]): void {} // eslint-disable-line @typescript-eslint/no-empty-function
 
   public created(): void {
     this.setHeadlessComponent(new TransferHeadlessComponent(this));
